@@ -27,7 +27,10 @@ Running
 panic: fork/exec /usr/bin/echo: operation not permitted
 ```
 
+- dockerデーモンの場合、Unix socketにバインドするためにsudo権限が必要らしい。(デフォルトではUnix socketのownerがroot)
+> The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can only access it using sudo. The Docker daemon always runs as the root user.
 
 ## 参考資料
 - https://kaminashi-developer.hatenablog.jp/entry/dive-into-swamp-container-scratch
 - https://qiita.com/woshahua/items/35c4ee5e90fd2c782eca
+- https://docs.docker.com/engine/install/linux-postinstall/
