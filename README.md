@@ -17,6 +17,18 @@ UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 17:14 pts/1    00:00:00 /proc/self/exe child ps -ef
 root           5       1  0 17:14 pts/1    00:00:00 ps -ef
 ```
+
+## namespace, resourceの分離
+
+|namespace|o/x|
+|---|---|
+|Process Tree|o|
+|Mount Point|o|
+|User/Group|x|
+|Host/Domain Name|o|
+|Network Stack|x|
+|IPC|x|
+
 ## メモ
 
 
